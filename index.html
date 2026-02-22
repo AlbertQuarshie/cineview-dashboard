@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CineView Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+
+        box-sizing: border-box;
+      }
+body{
+  background-color: #74c69d;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+      .top-nav {
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        top: 0;
+        left: 0;
+        background-color: #74c69d;
+        color: white;
+
+        display: flex; 
+        align-items: center;
+        justify-content: space-between; 
+        padding: 0 40px; 
+      }
+      .profile {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        z-index: 5;
+        border:1px solid red; 
+      }
+      .user-controls {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      .logo {
+        font-family: "Monoton", sans-serif;
+        font-size: 40px;
+      }
+
+      .sidebar {
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 200px;
+        height: 100vh;
+        padding-top: 60px;
+        background-color: #1b4332;
+      }
+
+      .sidebar nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      a {
+        color: beige;
+      }
+      .dashboard-wrapper{
+        flex: 1;
+      }
+      h2 {
+        font-family: "Sancreek", serif;
+        font-size: 30px;
+      }
+      .content-area {
+        background-color: #74c69d;
+        margin-top: 100px;
+        margin-left: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid gold;
+      }
+      .movie-grid {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+      .movie-card {
+        display: flex;
+        justify-content: center;
+        background-color: #1b4332;
+        height: 400px;
+        width: 260px;
+        border-radius: 20px;
+        padding: 20px;
+        backdrop-filter: blur(12px);
+      }
+      img {
+        height: 350px;
+        padding: 20px;
+        border-radius: 20px;
+        width: 250px;
+      }
+      img:hover {
+        cursor: pointer;
+      }
+     footer{
+         background-color: #74c69d;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+      p {
+        background-color: #74c69d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard-wrapper">
+      <header class="top-nav">
+        <div class="logo">CineView</div>
+        <div class="user-controls">
+          <input type="text" id="search" placeholder="Search Here" />
+          <img src="profile-photo.jpg" class="profile" />
+        </div>
+      </header>
+
+      <aside class="sidebar">
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">Trending</a>
+          <a href="#">Library</a>
+        </nav>
+      </aside>
+
+      <main class="content-area">
+        <h2>Recommended for You</h2>
+        <div class="movie-grid">
+          <div class="movie-card">
+            <img src="interstellar.jpg" alt="Interstellar" />
+          </div>
+          <div class="movie-card">
+            <img src="no country for old men.jpg" alt="No country" />
+          </div>
+          <div class="movie-card">
+            <img src="bullet train.jpg" alt="bullet" />
+          </div>
+          <div class="movie-card">
+            <img src="the batman.jpg" alt="batman" />
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+  <p>&copy; 2026 CineView. All Rights Reserved.</p>
+</footer>
+  </body>
+</html>
